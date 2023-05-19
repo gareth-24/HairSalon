@@ -4,30 +4,31 @@
 
 @model HairSalon.Models.Stylist
 
-<h2>Edit Stylist</h2>
+<h3>Edit Stylist</h3>
 <hr><br>
 
 <h5>Edit this stylist:  @Html.DisplayFor(model => model.StylistName)</h5>
+<br>
 
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.StylistId)
 
-  <div>
-    @Html.LabelFor(model => model.StylistName, "Name")<br>
-    @Html.TextBoxFor(model => model.StylistName)<br>
+  <div class="mb-3">
+    @Html.LabelFor(model => model.StylistName, "Name", new { @class="form-label"})
+    @Html.TextBoxFor(model => model.StylistName, new { @class="form-control"})
   </div>
-  <div>
-    @Html.LabelFor(model => model.YearsEmployed, "Years Employed")<br>
-    @Html.TextBoxFor(model => model.YearsEmployed)<br>
+  <div class="mb-3">
+    @Html.LabelFor(model => model.YearsEmployed, "Years Employed", new { @class="form-label"})
+    @Html.TextBoxFor(model => model.YearsEmployed, new { @class="form-control"})
   </div>
-  <div>
-    @Html.LabelFor(model => model.Specialties)<br>
-    @Html.TextAreaFor(model => model.Specialties)<br>
+  <div class="mb-3">
+    @Html.LabelFor(model => model.Specialties, new { @class="form-label"})
+    @Html.TextAreaFor(model => model.Specialties, new { @class="form-control"})
     @* maybe change to text box *@
-  </div><br>
+  </div>
 
   <input type="submit" value="Save" class="btn btn-primary"/>
 }
-
+<br>
 <p>@Html.ActionLink("Back to Stylists", "Index")</p>

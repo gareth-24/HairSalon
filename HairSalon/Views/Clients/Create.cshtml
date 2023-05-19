@@ -11,25 +11,23 @@
 <p>Go to @Html.ActionLink("this page", "Create", "Stylists") to add a stylist.</p>
 <hr><br>
 
-@* <h5>Add a new client</h5> *@
-
 @using (Html.BeginForm())
 {
-  <div>
-    @Html.LabelFor(model => model.ClientName, "Client Name:")<br>
-    @Html.TextBoxFor(model => model.ClientName)<br>
+  <div class="mb-3">
+    @Html.LabelFor(model => model.ClientName, "Client Name:", new { @class="form-label"})
+    @Html.TextBoxFor(model => model.ClientName, new { @class="form-control"})
   </div>
-  <div>
-    @Html.LabelFor(model => model.Description, "Description:")<br>
-    @Html.TextAreaFor(model => model.Description)<br>
+  <div class="mb-3">
+    @Html.LabelFor(model => model.Description, "Description:", new { @class="form-label"})
+    @Html.TextAreaFor(model => model.Description, new { @class="form-control"})
   </div>
-  <div>
-    @Html.LabelFor(model => model.Stylist)<br>
-    @Html.DropDownList("StylistId")<br>
+  <div class="mb-3">
+    @Html.LabelFor(model => model.Stylist, "Stylist: ", new { @class="form-label"})
+    @Html.DropDownList("StylistId")
   </div>
-
+  <br>
   <input type="submit" value="Add new client" class="btn btn-primary" />
 }
-
+<br>
 <p>@Html.ActionLink("Show all clients", "Index")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>

@@ -9,17 +9,16 @@
 @using (Html.BeginForm())
 {
   <div>
-    @Html.LabelFor(model => model.StylistName, "Name")<br>
-    @Html.TextBoxFor(model => model.StylistName)<br>
+    @Html.LabelFor(model => model.StylistName, "Name", new { @class="form-label"})<br>
+    @Html.TextBoxFor(model => model.StylistName, new { @class="form-control"})<br>
   </div>
   <div>
     @Html.LabelFor(model => model.YearsEmployed, "Years Employed")<br>
-    @Html.TextBoxFor(model => model.YearsEmployed)<br>
+    @Html.TextBoxFor(model => model.YearsEmployed, new { @class="form-control", type="number"})<br>
   </div>
   <div>
     @Html.LabelFor(model => model.Specialties)<br>
-    @Html.TextAreaFor(model => model.Specialties)<br>
-    @* maybe change to text box *@
+    @Html.TextAreaFor(model => model.Specialties, new { @class="form-control"})<br>
   </div><br>
 
   <input type="submit" value="Add new stylist" class="btn btn-primary"/>

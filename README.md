@@ -20,13 +20,13 @@ _This is an MVC web application that allows the user to input and store informat
 ## Setup/Installation Requirements
 
 * _Clone this repository to your desktop._
-* _Open your shell (e.g., Terminal or GitBash) and navigate to this project's root directory at ```./HairSalon.Solution/"```._
+* _Open your shell (e.g., Terminal or GitBash) and navigate to this project's root directory at ```./HairSalon.Solution/```._
 #### To Import the Database Schema to your local server:
 * _Launch MySQL Workbench and open the navigator window._
-* _Select the Administration tab and click on Data Import/Restore._
+* _Select the Administration tab and click on "Data Import/Restore"._
 * _In "Import Options" select "Import from Self-Contained File"._
 * _Navigate to the file named ```gareth_grindeland.sql``` that is located in this project's root directory._
-* _Under "Default Schema to be Imported To" select "New" and enter the name of your database and click "OK"._
+* _Under "Default Schema to be Imported To" select "New" and enter the name of your database, then click "OK"._
 * _Select "Start Import" at the bottom right._
 
 #### To connect the App to your Database:

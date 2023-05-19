@@ -19,7 +19,7 @@ namespace HairSalon.Controllers
     {
       List<Client> model = _db.Clients
                               .Include(client => client.Stylist)
-                              // .OrderBy(model => model.ClientName)
+                              .OrderBy(model => model.ClientName)
                               .ToList();
       return View(model);
     }

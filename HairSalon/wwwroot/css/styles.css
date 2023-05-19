@@ -7,3 +7,8 @@ div#footer {
   background:#333;
   padding:8px;
 }
+
+body {
+  background-color: azure ;
+  margin-top: 20px;
+}

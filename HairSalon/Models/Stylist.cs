@@ -4,6 +4,9 @@ namespace HairSalon.Models
 {
     public class Stylist
     {
-      
+      public int StylistId { get; set; }  //Primary Key
+      public string StylistName { get; set; }
+      public string Specialties { get; set; }
+      public List<Client> Clients { get; set; }
     }
 }
